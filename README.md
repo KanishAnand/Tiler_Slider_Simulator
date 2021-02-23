@@ -13,4 +13,4 @@ eg: python3 __main__.py --input-file test_files/sample_grid_1.txt --moves-file t
 
 # Display
 
-![img](img/display.png)]
+![img](img/display.png)
