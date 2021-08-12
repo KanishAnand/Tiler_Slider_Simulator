@@ -14,13 +14,13 @@ class GridRender(GridState):
         pygame.init()
         window_width: int = self.m * config.BLOCK_SIZE
         window_height: int = self.n * config.BLOCK_SIZE
-        window_title: str = "Tiler Slider"
-        self.screen = pygame.display.set_mode((window_height, window_width))
+        window_title: str = config.WINDOW_TITLE
+        self.screen = pygame.display.set_mode((window_width, window_height))
         pygame.display.set_caption(window_title)
 
     def render(self):
-        for x in range(self.m):
-            for y in range(self.n):
+        for y in range(self.m):
+            for x in range(self.n):
                 rect = pygame.Rect(
                     y * config.BLOCK_SIZE, x * config.BLOCK_SIZE, config.BLOCK_SIZE, config.BLOCK_SIZE)
                 circle_color = config.COLORS["SPACE"]
